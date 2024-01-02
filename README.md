@@ -1,2 +1,4 @@
 # code-managed-dns
-Authorities DNS providers managed via terraform 
+Authorative DNS Nameserver providers managed via Terraform 
+- NS1 DNS
+- Cloudflare DNS todo
