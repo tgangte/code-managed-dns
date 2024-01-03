@@ -6,10 +6,7 @@ name: CI
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
-
+    branches: [ "**" ]
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
@@ -34,3 +31,26 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+jobs:
+  tflint:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+      name: Checkout source code
+
+    - uses: terraform-linters/setup-tflint@v3
+      name: Setup TFLint
+      with:
+        tflint_version: latest
+
+    - name: Show version
+      run: tflint --version
+
+    - name: Init TFLint
+      run: tflint --init
+      env:
+        GITHUB_TOKEN: ${{ github.token }}
+
+    - name: Run TFLint
+      run: tflint -f compact
