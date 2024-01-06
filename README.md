@@ -13,7 +13,7 @@ In this case, we use Terraform to orchestrate and synchronize the DNS settings a
 ### Supported providers
 - NS1 DNS (https://registry.terraform.io/providers/ns1-terraform/ns1/latest/docs)
 - Cloudflare DNS  (https://registry.terraform.io/providers/gaima8/cloudflare/latest/docs)
-- Azure DNS  todo
+- More can be added if they have terraform providers 
 
 ## Authentication 
 
@@ -36,6 +36,7 @@ simple_records_under_zone = [
   },
 ```
 main.tf has the configs for the providers, you can comment out any provider you do not wish to use with /% comment %/
+
 To  execute
 
 ```
