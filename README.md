@@ -27,7 +27,7 @@ For Cloudflare,
 
 export TF_VAR_cloudflare_api_token="insert token from cloudflare portal"
 ## Usage
-terraform.tvfars has the DNS records that we want to add.
+The terraform.tvfars has the DNS records that we want to add. This is a list and you can add as many records as you need. 
 ```
 simple_records_under_zone = [
   {
@@ -38,7 +38,7 @@ simple_records_under_zone = [
     record_value = "testcname.example.com"
   },
 ```
-main.tf has the configs for the providers, you can comment out any provider you do not wish to use with /% comment %/
+The main.tf has the configs for the providers and executes the creation of the records, you can comment out any provider you do not wish to use with /% comment %/
 
 To  execute
 
