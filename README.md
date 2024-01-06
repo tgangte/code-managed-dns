@@ -2,9 +2,9 @@
 ## Managing Multiple Authoritative DNS Nameserver Providers with Infrastructure as Code using Terraform
 
 
-DNS rarely fails, but when it does, it can cause significant damage. There are numerous documented cases of authoritative DNS nameservers being DDoSed, leading to website downtime. [DYN DDOS 2016](https://en.wikipedia.org/wiki/DDoS_attacks_on_Dyn)
+DNS rarely fails, but when it does, it can cause significant damage. There are numerous documented cases of authoritative DNS nameservers being DDoS'd, leading to website downtime. [DYN DDOS 2016](https://en.wikipedia.org/wiki/DDoS_attacks_on_Dyn)
 
-This risk can be mitigated by using not just one, but two authoritative nameservers. If desired, you can use even more authoritative nameservers, though this might be overkill.
+This risk can be mitigated by using not just one, but two authoritative nameservers. If desired, you can use even more authoritative nameservers, though this might be overkill. 
 
 Effectively, this means that you need two DNS providers, and both of them need to have the exact same DNS records (such as A records, CNAMEs, etc.). Normally, DNS settings are configured via the respective DNS provider’s portal, but this becomes unmanageable when using a dual DNS setup. Infrastructure as code to the rescue!
 
