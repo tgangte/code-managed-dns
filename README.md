@@ -23,6 +23,9 @@ For NS1, Execute this:
 
 export TF_VAR_ns1_apikey="insert key from ns1 portal"
 
+For Cloudflare,
+
+export TF_VAR_cloudflare_api_token="insert token from cloudflare portal"
 ## Usage
 terraform.tvfars has the DNS records that we want to add.
 ```
@@ -47,6 +50,7 @@ terraform apply
 ```
 
 Notes:
-I use Terraform Cloud to store the state files, but there are many other options such as Azure, S3  etc. 
+- I use Terraform Cloud to store the state files, but there are many other options such as Azure, S3  etc. 
+- Complex records such as DNS round robin, healthcheck or alias records can be added based on provider support 
 
 
