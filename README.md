@@ -1,5 +1,5 @@
 # code-managed-dns
-## Multiple Authorative DNS nameserver providers managed via Terraform IaaC
+## Managing Multiple Authoritative DNS Nameserver Providers with Terraform Infrastructure as Code
 
 
 DNS rarely fails, but when it does, it can cause significant damage. There are numerous documented cases of authoritative DNS nameservers being DDoSed, leading to website downtime. [DYN DDOS 2016](https://en.wikipedia.org/wiki/DDoS_attacks_on_Dyn)
