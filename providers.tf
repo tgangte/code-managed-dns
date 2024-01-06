@@ -14,7 +14,6 @@ terraform {
 
 provider "ns1" {
   apikey                 = var.ns1_apikey
-  rate_limit_parallelism = 60
 }
 
 provider "cloudflare" {
