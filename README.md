@@ -6,7 +6,7 @@ DNS rarely fails, but when it does, it can cause significant damage. There are n
 
 This risk can be mitigated by using not just one, but two authoritative nameservers. If desired, you can use even more authoritative nameservers, though this might be overkill.
 
-Effectively, this means that you need two DNS providers, and both of them need to have the exact same DNS records (such as A records, CNAMEs, etc.). Normally, DNS settings are configured via the respective DNS provider’s portal, but this becomes unmanageable when using a dual DNS setup. Hence, infrastructure as code comes to the rescue.
+Effectively, this means that you need two DNS providers, and both of them need to have the exact same DNS records (such as A records, CNAMEs, etc.). Normally, DNS settings are configured via the respective DNS provider’s portal, but this becomes unmanageable when using a dual DNS setup. Infrastructure as code to the rescue!
 
 In this case, we use Terraform to orchestrate and synchronize the DNS settings across multiple DNS providers.
 
