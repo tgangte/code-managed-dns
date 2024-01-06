@@ -27,6 +27,8 @@ For Cloudflare,
 
 export TF_VAR_cloudflare_api_token="insert token from cloudflare portal"
 ## Usage
+As a prerequisite, you need to specify the Nameservers of your providers in the domain registrar's portal as a on tiem step. That will allow the respective providers to create and manage records. 
+
 The terraform.tvfars has the DNS records that we want to add. This is a list and you can add as many records as you need. 
 ```
 simple_records_under_zone = [
